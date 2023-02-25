@@ -1,11 +1,10 @@
 import { defineComponent } from 'vue';
+import "element-plus/dist/index.css"
+import './App.less'
 const App = defineComponent({
   setup: (props, context) => {
     return () => (
-      <div>
       <router-view />
-      <div id="subapp-viewport"/>
-      </div>
     )
   }
 });
