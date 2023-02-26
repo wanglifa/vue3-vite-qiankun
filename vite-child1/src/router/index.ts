@@ -17,14 +17,6 @@ const routes: RouteRecordRaw[] = [
       },
     ],
   },
-      // {
-      //   path: "child1",
-      //   component: () => import("@/views/A"),
-      // },
-      // {
-      //   path: "child2",
-      //   component: () => import("@/views/Child2"),
-      // },
 ]
 
 export const router = createRouter({

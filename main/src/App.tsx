@@ -4,7 +4,9 @@ import './App.less'
 const App = defineComponent({
   setup: (props, context) => {
     return () => (
+      <>
       <router-view />
+      </>
     )
   }
 });

@@ -1,7 +1,8 @@
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
 import {ElContainer, ElAside, ElMain, ElHeader} from "element-plus"
 import s from './index.module.less'
 import { SlideBar } from '../../components/SliderBar';
+import { start } from 'qiankun';
 const Layout = defineComponent({
   setup: (props, context) => {
     return () => (
@@ -14,7 +15,6 @@ const Layout = defineComponent({
               </ElAside>
               <ElMain class={s.main}>
                 <router-view />
-                <div id="subapp-viewport"/>
               </ElMain>
           </ElContainer>
         </ElContainer>
