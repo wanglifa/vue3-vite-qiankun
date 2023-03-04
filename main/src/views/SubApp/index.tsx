@@ -1,5 +1,4 @@
-import { start } from 'qiankun';
-import { defineComponent, onMounted } from 'vue';
+import { defineComponent  } from 'vue';
 const SubApp = defineComponent({
   setup: (props, context) => {
     return () => (

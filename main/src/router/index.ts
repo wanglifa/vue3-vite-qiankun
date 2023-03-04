@@ -24,6 +24,7 @@ export const routes: RouteRecordRaw[] = [
           {
             path: "/subapp/child1",
             name: "child1",
+            // 这里的二级菜单组件是没有意义的，但是 ts 必须要传一个 component，所以随便写一个就行，为了解决 ts bao'cuo
             component: import("../views/Portal")
           },
           {

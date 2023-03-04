@@ -1,17 +1,7 @@
-import { createApp } from 'vue'
-import App from './App'
-import {registerMicroApps, start} from "qiankun"
-import router from './router'
-const getActiveRule = (hash: string) => (location: { hash: string }) =>
-  location.hash.startsWith(hash)
+import { createApp } from "vue"
+import App from "./App"
+import router from "./router"
+import "@/micro"
+import { store } from "@/store"
 
-registerMicroApps([
-  {
-    name: "subapp",
-    entry: "//localhost:3002",
-    container: "#subapp",
-    activeRule: getActiveRule("#/subapp"),
-  }
-])
-
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).use(store).mount("#app")

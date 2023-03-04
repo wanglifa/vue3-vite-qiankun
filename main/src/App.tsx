@@ -1,13 +1,17 @@
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue"
 import "element-plus/dist/index.css"
-import './App.less'
+import "./App.less"
+import { useStore } from "vuex"
 const App = defineComponent({
   setup: (props, context) => {
+    const store = useStore()
+
     return () => (
       <>
-      <router-view />
+        <div>token: {store.state.token}</div>
+        <router-view />
       </>
     )
-  }
-});
-export default App;
+  },
+})
+export default App
